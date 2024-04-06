@@ -13,3 +13,7 @@ type IUserUsecase interface {
 type userUsecase struct {
 	ur repository.IUserRepository
 }
+
+func NewUserUsecase(ur repository.IUserRepository) IUserUsecase {
+	return &userUsecase{ur}
+}
